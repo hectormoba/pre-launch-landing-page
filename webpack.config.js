@@ -14,10 +14,11 @@ module.exports = {
           }
         }
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource'
+      }
     ]
-  },
-  resolve: {
-    extensions: ['.js', '.jsx']
   },
   output: {
     path: path.resolve(__dirname, './dist'),
