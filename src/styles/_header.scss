@@ -1,0 +1,35 @@
+.header{
+  justify-content: center;
+  padding: $regular 0;
+}
+
+.hero{
+  .regular-text{
+    margin-top: $regular;
+    text-align: center
+  }
+}
+
+.hero-image{
+  width: 110%
+}
+
+.title{
+  @include font-sizing($big-title, $big-title-line);
+  margin-top: $regular;
+  text-align: center;
+  b{
+    color: $focus-color
+  }
+}
+
+.hero-text-container{
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon{
+  margin-top: $regular;
+}
+
+

@@ -1,0 +1,18 @@
+.display-flex{
+  display: flex;
+}
+
+.globalpadding{
+  padding: 0 1rem;
+}
+
+.regular-text{
+  color: $secondary-font-color;
+}
+
+
+//mixins
+@mixin font-sizing($font-size, $line-size) {
+  font-size: $font-size;
+  line-height: $line-size;
+}

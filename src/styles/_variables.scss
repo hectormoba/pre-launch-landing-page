@@ -1,0 +1,37 @@
+//colors
+$main-background-color: #080C20;
+$constrast-background-color: #093F6B;
+$font-color: #FFFFFF;
+$secondary-font-color: #777F9B;
+$focus-color: #3EE9E5;
+$error-color: #FF2965;
+
+//font
+@font-face{
+  font-family: 'Manrope';
+  src: url('../assets/Manrope-ExtraBold.ttf') format('truetype'),
+    url('../assets/Manrope-Medium.ttf') format('truetype');
+  font-weight: 500 800;
+}
+
+$sans-serif: 'Manrope', 'Roboto', 'Fira Sans', sans-serif;
+
+//SIZES
+//font-sizes
+$max-title: 48px; 
+$max-title-line: 56px;
+$big-title: 40px;
+$big-title-line: 55px;
+$regular-title: 32px;
+$regular-title-line: 44px;
+$min-title: 18px;
+$min-title-line: 25px;
+$text: 15px;
+$text-line: $min-title-line;
+
+//spacing
+
+$regular: 2rem;
+$mini: 1rem
+
+

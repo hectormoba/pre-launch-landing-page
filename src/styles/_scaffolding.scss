@@ -1,0 +1,27 @@
+html {
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: $sans-serif;
+  color: $font-color;
+}
+
+h1,h2,h3,h4,h5,h6{
+  margin: 0
+}
+
+p {
+  @include font-sizing($text, $text-line);
+  font-weight: 500;
+}

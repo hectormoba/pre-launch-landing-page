@@ -27,18 +27,18 @@ class Hero extends Component {
 
 
     if(screenSize < 868) {
-      chosenHeroImageLeft = <img src={imageMobile} alt="Hero image mobile" />
+      chosenHeroImageLeft = <img className="hero-image" src={imageMobile} alt="Hero image mobile" />
     } else {
-      chosenHeroImageLeft = <img src={imageLeft} alt="First Hero image" />
-      chosenHeroImageRight = <img src={imageRight} alt="First Hero image" />
+      chosenHeroImageLeft = <img className="hero-image" src={imageLeft} alt="First Hero image" />
+      chosenHeroImageRight = <img className="hero-image" src={imageRight} alt="First Hero image" />
     }
     return(
-      <section>
+      <section class="hero">
         {chosenHeroImageLeft}
-        <div>
-          <h1>Get paid for the work you <em>love</em> to do</h1>
-          <p> The 9-5 grind is so last century. We believe in living life on your own terms. Whether you’re looking to escape the rat race or set up a side hustle, we’ve got you covered</p>
-          <img src={scrollImage} alt="Scroll icon" />
+        <div class="hero-text-container display-flex">
+          <h1 class="title">Get paid for the work you <b>love</b> to do</h1>
+          <p className="regular-text globalpadding"> The 9-5 grind is so last century. We believe in living life on your own terms. Whether you’re looking to escape the rat race or set up a side hustle, we’ve got you covered</p>
+          <img className="icon" src={scrollImage} alt="Scroll icon" />
         </div>
         {chosenHeroImageRight}
       </section>
