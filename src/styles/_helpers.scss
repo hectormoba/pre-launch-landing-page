@@ -1,3 +1,21 @@
+//mixins
+@mixin font-sizing($font-size, $line-size) {
+  font-size: $font-size;
+  line-height: $line-size;
+  @if($font-size == $text) {
+    font-weight: 300;
+  } @else {
+    font-weight: 800;
+  }
+}
+
+@mixin card-style($text-color, $background-color){
+  color: $text-color;
+  background-color: $background-color;
+}
+
+//helpers
+
 .display-flex{
   display: flex;
 }
@@ -10,9 +28,18 @@
   color: $secondary-font-color;
 }
 
+.input{
+  @include card-style($secondary-font-color, $constrast-background-color);
+  padding: 0 10px;
+}
 
-//mixins
-@mixin font-sizing($font-size, $line-size) {
-  font-size: $font-size;
-  line-height: $line-size;
+.button{
+  text-align: center;
+  @include card-style($constrast-background-color, $focus-color)
+}
+
+.title{
+  @include font-sizing($big-title, $big-title-line);
+  margin: $regular 0;
+  text-align: center;
 }

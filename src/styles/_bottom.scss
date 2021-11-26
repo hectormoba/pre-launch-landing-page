@@ -1,0 +1,8 @@
+.bottom-form{
+  flex-direction: column;
+  align-items: center;
+  .title{
+    @include font-sizing($regular-title, $regular-title-line);
+  }
+}
+

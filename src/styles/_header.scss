@@ -4,6 +4,13 @@
 }
 
 .hero{
+  .title{
+    margin-bottom: 0;
+    padding: 0 $regular;
+    b{
+      color: $focus-color
+    }
+  }
   .regular-text{
     margin-top: $regular;
     text-align: center
@@ -12,15 +19,6 @@
 
 .hero-image{
   width: 110%
-}
-
-.title{
-  @include font-sizing($big-title, $big-title-line);
-  margin-top: $regular;
-  text-align: center;
-  b{
-    color: $focus-color
-  }
 }
 
 .hero-text-container{

@@ -36,11 +36,11 @@ class Input extends Component {
       errorMessage = null
     }
     return(
-      <form>
-        <h2>Get notified when we lauch</h2>
-        <input placeholder='Email address' value={input} onChange={this.handleChange} type='text' />
+      <form className="bottom-form display-flex globalpadding">
+        <h2 className="title">Get notified when we lauch</h2>
+        <input className="input" placeholder='Email address' value={input} onChange={this.handleChange} type='text' />
         {errorMessage}
-        <input value='Get notified' type='button' onClick={this.verifyEmail}/>
+        <input className="button"value='Get notified' type='button' onClick={this.verifyEmail}/>
       </form>
     )
   }

@@ -21,7 +21,48 @@ h1,h2,h3,h4,h5,h6{
   margin: 0
 }
 
+figure{
+  margin: 0
+}
+
 p {
   @include font-sizing($text, $text-line);
   font-weight: 500;
+  margin: 0
 }
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  @include font-sizing($text, $text-line);
+  list-style: none;
+  font-weight: 500;
+  padding-bottom: 5px;
+  img{
+    margin-right: 10px;
+  }
+}
+
+form{
+  padding: ($regular * 2) 0;
+}
+
+input, button{
+  border-radius: 50px;
+  margin: $mini 0;
+  &:last-child{
+    margin-bottom: $regular * 2;
+  }
+  width: 100%;
+  height: $regular * 1.25;
+  border: 1px solid transparent;
+}
+
+input::placeholder{
+  @include font-sizing($text, $text-line);
+  font-weight: 500;
+}
+

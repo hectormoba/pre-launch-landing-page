@@ -9,9 +9,8 @@ $error-color: #FF2965;
 //font
 @font-face{
   font-family: 'Manrope';
-  src: url('../assets/Manrope-ExtraBold.ttf') format('truetype'),
-    url('../assets/Manrope-Medium.ttf') format('truetype');
-  font-weight: 500 800;
+  src: url('../assets/Manrope-VariableFont_wght.ttf');
+  font-weight: 300 800;
 }
 
 $sans-serif: 'Manrope', 'Roboto', 'Fira Sans', sans-serif;
@@ -32,6 +31,7 @@ $text-line: $min-title-line;
 //spacing
 
 $regular: 2rem;
-$mini: 1rem
+$mini: 1rem;
+$radius: 45px;
 
 
