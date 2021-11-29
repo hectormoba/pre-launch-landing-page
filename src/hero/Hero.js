@@ -33,10 +33,10 @@ class Hero extends Component {
       chosenHeroImageRight = <img className="hero-image" src={imageRight} alt="First Hero image" />
     }
     return(
-      <section class="hero">
+      <section className="hero">
         {chosenHeroImageLeft}
-        <div class="hero-text-container display-flex">
-          <h1 class="title">Get paid for the work you <b>love</b> to do</h1>
+        <div className="hero-text-container display-flex">
+          <h1 className="title">Get paid for the work you <b>love</b> to do</h1>
           <p className="regular-text globalpadding"> The 9-5 grind is so last century. We believe in living life on your own terms. Whether you’re looking to escape the rat race or set up a side hustle, we’ve got you covered</p>
           <img className="icon" src={scrollImage} alt="Scroll icon" />
         </div>

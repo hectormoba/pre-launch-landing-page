@@ -51,18 +51,23 @@ form{
 }
 
 input, button{
+  width: 100%;
+  height: $regular * 1.25;
   border-radius: 50px;
-  margin: $mini 0;
+  margin-top: $mini;
+  border: 1px solid transparent;
   &:last-child{
     margin-bottom: $regular * 2;
   }
-  width: 100%;
-  height: $regular * 1.25;
-  border: 1px solid transparent;
+  &:focus{
+    outline: none;
+  }
 }
 
-input::placeholder{
+input {
+&::placeholder, &[type="button"]  {
   @include font-sizing($text, $text-line);
-  font-weight: 500;
+  font-weight: 600;
+  }
 }
 

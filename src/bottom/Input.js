@@ -27,18 +27,22 @@ class Input extends Component {
 
   render(){
     const {input, message, valid} = this.state
-    let errorMessage
+    let inputClass = 'input'
+    let errorMessage = <p></p>
     if(!valid && input.length === 0) {
-      errorMessage = message[0]
+      errorMessage = <p className="error">{message[0]}</p>
+      inputClass += ' onError'
     } else if(!valid){
-      errorMessage = message[1]
+      errorMessage = <p className="error">{message[1]}</p>
+      inputClass += ' onError'
     } else if(valid) {
       errorMessage = null
+      inputClass = 'input'
     }
     return(
       <form className="bottom-form display-flex globalpadding">
         <h2 className="title">Get notified when we lauch</h2>
-        <input className="input" placeholder='Email address' value={input} onChange={this.handleChange} type='text' />
+        <input className={inputClass} placeholder='Email address' value={input} onChange={this.handleChange} type='text' />
         {errorMessage}
         <input className="button"value='Get notified' type='button' onClick={this.verifyEmail}/>
       </form>

@@ -31,15 +31,34 @@
 .input{
   @include card-style($secondary-font-color, $constrast-background-color);
   padding: 0 10px;
+  &:focus-visible{
+    border: 1px solid $focus-color;
+  }
 }
 
 .button{
   text-align: center;
-  @include card-style($constrast-background-color, $focus-color)
+  @include card-style($constrast-background-color, $focus-color);
+  &:hover, &:active{
+    border-color: $focus-color;
+    background-color: $main-background-color;
+    color: $font-color;
+  }
 }
 
 .title{
   @include font-sizing($big-title, $big-title-line);
   margin: $regular 0;
   text-align: center;
+}
+
+.error{
+  color: $error-color;
+}
+
+.onError{
+  border: 1px solid $error-color;
+  &:focus-visible{
+    border: 1px solid $error-color;
+  }
 }
