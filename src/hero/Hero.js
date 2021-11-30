@@ -21,23 +21,29 @@ class Hero extends Component {
   render() {
     let chosenHeroImageLeft
     let chosenHeroImageRight
+    let heroTextClass
+    let heroClass = "hero"
 
     const {imageLeft, imageRight, scrollImage, imageMobile} = this.props
     const {screenSize} = this.state
 
 
-    if(screenSize < 868) {
+    if(screenSize < 649) {
       chosenHeroImageLeft = <img className="hero-image" src={imageMobile} alt="Hero image mobile" />
+      heroClass = "hero"
+      heroTextClass = "hero-text-container globalpadding"
     } else {
       chosenHeroImageLeft = <img className="hero-image" src={imageLeft} alt="First Hero image" />
       chosenHeroImageRight = <img className="hero-image" src={imageRight} alt="First Hero image" />
+      heroClass += " display-flex"
+      heroTextClass = "hero-text-container"
     }
     return(
-      <section className="hero">
+      <section className={heroClass}>
         {chosenHeroImageLeft}
-        <div className="hero-text-container display-flex">
+        <div className={heroTextClass}>
           <h1 className="title">Get paid for the work you <b>love</b> to do</h1>
-          <p className="regular-text globalpadding"> The 9-5 grind is so last century. We believe in living life on your own terms. Whether you’re looking to escape the rat race or set up a side hustle, we’ve got you covered</p>
+          <p className="regular-text"> The 9-5 grind is so last century. We believe in living life on your own terms. Whether you’re looking to escape the rat race or set up a side hustle, we’ve got you covered</p>
           <img className="icon" src={scrollImage} alt="Scroll icon" />
         </div>
         {chosenHeroImageRight}

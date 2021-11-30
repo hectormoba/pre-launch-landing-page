@@ -6,8 +6,10 @@ function Item(props){
       <figure className="image-container display-flex">
       <img className={`image-${props.name} image`} src={props.image} alt="Item image" />
       </figure>
-      <h4 className="subtitle">{props.title}</h4>
-      <p className="regular-text">{props.text}</p>
+      <div className="item-text-container">
+        <h4 className="subtitle">{props.title}</h4>
+        <p className="regular-text">{props.text}</p>
+      </div>
     </div>
   )
 }

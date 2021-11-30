@@ -1,12 +1,25 @@
 .header{
-  justify-content: center;
+  text-align: center;
   padding: $regular 0;
+  @media (min-width: $tablet)  {
+    text-align: left;
+    padding: $regular;
+  }
+  @media (min-width: $desktop){
+    max-width: $desktop-width;
+    padding: ($regular * 2) 0;
+    margin: 0 auto;
+  }
 }
 
 .hero{
+  @media (min-width: $tablet){
+    .title{
+      margin: 0;
+    }
+  }
   .title{
     margin-bottom: 0;
-    padding: 0 $regular;
     b{
       color: $focus-color
     }
@@ -18,16 +31,28 @@
 }
 
 .hero-image{
-  width: 110%
+  width: 100%;
+  @media (min-width: $tablet){
+    object-fit: cover;
+  }
 }
 
 .hero-text-container{
-  flex-direction: column;
-  align-items: center;
+  @media (min-width: $tablet){
+    min-width: 65%;
+    justify-content: center;
+    padding: $mini * 1.5;
+    background-image: url('../assets/bg-hero-squiggle.svg');
+    background-size: contain;
+  }
+  @media (min-width: $desktop){
+    max-width: $desktop-width;
+  }
 }
 
 .icon{
-  margin-top: $regular;
+  margin: $regular auto 0 auto;
+  display: block;
 }
 
 

@@ -4,6 +4,11 @@
 
 .page-section{
   margin-top: $regular * 3;
+  @media (min-width: $tablet){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .item-container{
@@ -25,4 +30,11 @@
     position: absolute;
     top: -20px;
   }
+  @media (min-width: $tablet){
+    width: $tablet-width;
+  }
+}
+
+.form-wrap{
+  padding-bottom: $max;
 }

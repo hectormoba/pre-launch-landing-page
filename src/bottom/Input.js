@@ -40,12 +40,16 @@ class Input extends Component {
       inputClass = 'input'
     }
     return(
-      <form className="bottom-form display-flex globalpadding">
+      <div className="form-wrap globalpadding">
         <h2 className="title">Get notified when we lauch</h2>
-        <input className={inputClass} placeholder='Email address' value={input} onChange={this.handleChange} type='text' />
-        {errorMessage}
-        <input className="button"value='Get notified' type='button' onClick={this.verifyEmail}/>
-      </form>
+        <form className="bottom-form display-flex">
+          <div className="input-wrapper">
+            <input className={inputClass} placeholder='Email address' value={input} onChange={this.handleChange} type='text' />
+            {errorMessage}
+          </div>
+          <input className="button"value='Get notified' type='button' onClick={this.verifyEmail}/>
+        </form>
+      </div>
     )
   }
 }

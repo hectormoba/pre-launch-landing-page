@@ -4,8 +4,16 @@
 }
 
 .item-container{
-  .regular-text{
-    text-align: center;
+  @media (min-width: $tablet){
+    flex-direction: row;
+    align-items: flex-start;
+    width: 80%;
+    &:nth-child(2n){
+      align-self: flex-start;
+    }
+    &:nth-child(2n + 1){
+      align-self: center;
+    }
   }
 }
 
@@ -16,10 +24,34 @@
   background-color: $constrast-background-color;
   align-items: center;
   justify-content: center;
+  @media (min-width: $tablet){
+    margin-right: $regular * 1.5;
+    height: 120px;
+    width: 140px
+  }
 }
 
 .image-passion{
   margin-inline-start: 10px;
+}
+
+.item-text-container {
+  @media (min-width: $tablet){
+    height: 100%;
+    .regular-text{
+      text-align: left !important;
+    }
+    .subtitle{
+      text-align: left !important;
+    }
+  }
+  .regular-text{
+    text-align: center;
+    margin: 0;
+  }
+  .subtitle{
+    text-align: center;
+  }
 }
 
 .page-section{
@@ -27,14 +59,21 @@
     @include font-sizing($regular-title, $regular-title-line);
     margin-top: 0;
     margin-bottom: $mini;
+    @media (min-width: $tablet){
+      margin: 0;
+    }
   }
-  .regular-text{
-    text-align: center;
-  }
-  .regular-text:nth-child(2n) {
-    margin-bottom: $regular * 1.5;
-  }
+}
 
+.plans-section{
+  .title {
+    ~ {
+      .regular-text{
+      text-align: center;
+      margin-bottom: $regular * 2;
+      }
+    }
+  }
 }
 
 .plans-card{

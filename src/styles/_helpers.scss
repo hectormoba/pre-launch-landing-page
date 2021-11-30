@@ -21,11 +21,15 @@
 }
 
 .globalpadding{
-  padding: 0 1rem;
+  padding: 0 ($mini * 1.5);
+  @media (min-width: $tablet){
+    padding: 0 $max;
+  }
 }
 
 .regular-text{
   color: $secondary-font-color;
+  margin: $regular 0;
 }
 
 .input{

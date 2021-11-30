@@ -46,19 +46,12 @@ li{
   }
 }
 
-form{
-  padding: ($regular * 2) 0;
-}
-
 input, button{
   width: 100%;
   height: $regular * 1.25;
   border-radius: 50px;
   margin-top: $mini;
   border: 1px solid transparent;
-  &:last-child{
-    margin-bottom: $regular * 2;
-  }
   &:focus{
     outline: none;
   }
