@@ -76,9 +76,11 @@ class App extends React.Component {
           {itemsContent.map(item => 
             <Item name={item.id} image={item.image} title={item.title} text={item.text} key={item.id}/>)}
         </section>
-        <section className="plans-section page-section globalpadding">
+        <section className="title-transition globalpadding">
           <h2 className="title">Our pricing plans</h2>
           <p className="regular-text">We only make money when our creators make money. Our plans are always affordable, and it’s completely free to get started.</p>
+        </section>
+        <section className="plans-section page-section globalpadding"> 
           {plansContent.map(item=>
           <Plans name={item.id} topIcon={item.icon} title={item.title} upperText={item.upperText} pricing={item.planPricing} planInstallment={item.planInstallment} items={item.itemsList} key={item.id}/>)}
         </section>
