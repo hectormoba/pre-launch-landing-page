@@ -40,7 +40,7 @@ class Input extends Component {
       inputClass = 'input'
     }
     return(
-      <div className="form-wrap globalpadding">
+      <div className="form-wrap global-spacing">
         <h2 className="title">Get notified when we lauch</h2>
         <form className="bottom-form display-flex">
           <div className="input-wrapper">

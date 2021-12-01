@@ -3,7 +3,7 @@ import React from 'react'
 function Item(props){
   return(
     <div className="item-container display-flex">
-      <figure className="image-container display-flex">
+      <figure className="image-container">
       <img className={`image-${props.name} image`} src={props.image} alt="Item image" />
       </figure>
       <div className="item-text-container">

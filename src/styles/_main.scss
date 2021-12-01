@@ -1,8 +1,3 @@
-.subtitle{
-  @include font-sizing($min-title, $min-title-line);
-  padding: $mini 0;
-}
-
 .item-container{
   @media (min-width: $tablet){
     flex-direction: row;
@@ -15,6 +10,7 @@
       align-self: center;
     }
   }
+
   @media (min-width: $desktop){
     flex-direction: column;
     &:nth-child(2n){
@@ -27,21 +23,30 @@
 }
 
 .image-container{
-  width: 130px;
-  height: 130px;
-  border-radius: $radius;
+  padding: 1rem;
+  border-radius: 30px;
+  flex-grow: 1;
   background-color: $constrast-background-color;
-  align-items: center;
-  justify-content: center;
   @media (min-width: $tablet){
     margin-right: $regular * 1.5;
-    height: 120px;
-    width: 140px
+  }
+  @media (min-width: $desktop){
+    margin-right: 0;
+  }
+}
+
+.image{
+  object-fit: contain;
+  width: 80px;
+  height: 80px;
+  @media (min-width: $desktop){
+    width: 100px;
+    height: 100px;
   }
 }
 
 .image-passion{
-  margin-inline-start: 10px;
+  object-position: right;
 }
 
 .item-text-container {
@@ -52,6 +57,12 @@
     }
     .subtitle{
       text-align: left !important;
+      padding-top: 0;
+    }
+  }
+  @media (min-width: $desktop){
+    .subtitle{
+      padding: $mini 0;
     }
   }
   .regular-text{
@@ -64,9 +75,21 @@
 }
 
 .title-transition{
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto;
+  max-width: 600px;
+  margin: $max auto auto;
+  .title{
+    @include font-sizing($regular-title, $regular-title-line);
+    margin-top: 0;
+  }
+  .regular-text{
+    text-align: center;
+    padding: 0 $regular;
+  }
+  @media (min-width: $tablet){
+    .regular-text{
+      padding: 0;
+    }
+  }
 }
 
 .page-section{
@@ -92,12 +115,20 @@
 }
 
 .plans-card{
-  margin-bottom: $regular * 2;
+  border-radius: 5px;
   .title{
     text-align: justify;
   }
   .regular-text{
     text-align: justify;
+  }
+  .plans-icon{
+    position: absolute;
+    top: -20px;
+  }
+  em{
+    position: absolute;
+    top: 10px;
   }
 }
 
@@ -115,6 +146,9 @@
   @include card-style($main-background-color, $focus-color);
   .plans-icon{
     top: -40px;
+  }
+  .title{
+    position: relative;
   }
   .regular-text{
     color: $main-background-color;

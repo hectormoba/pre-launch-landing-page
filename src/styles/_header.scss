@@ -13,11 +13,6 @@
 }
 
 .hero{
-  @media (min-width: $tablet){
-    .title{
-      margin: 0;
-    }
-  }
   .title{
     margin-bottom: 0;
     b{
@@ -28,25 +23,30 @@
     margin-top: $regular;
     text-align: center
   }
+  @media (min-width: $tablet){
+    .title{
+      margin: 0;
+    }
+  }
 }
 
 .hero-image{
   width: 100%;
   @media (min-width: $tablet){
     object-fit: cover;
+    flex: 0 1.5 auto;
   }
 }
 
 .hero-text-container{
   @media (min-width: $tablet){
-    min-width: 65%;
-    justify-content: center;
     padding: $mini * 1.5;
     background-image: url('../assets/bg-hero-squiggle.svg');
     background-size: contain;
+    flex: 0 1 auto;
   }
   @media (min-width: $desktop){
-    max-width: $desktop-width;
+    max-width: $desktop - 100px;
   }
 }
 

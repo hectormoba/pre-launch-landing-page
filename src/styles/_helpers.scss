@@ -15,16 +15,30 @@
 }
 
 //helpers
+.main-container{
+  background-color: $main-background-color;
+}
 
 .display-flex{
   display: flex;
 }
 
-.globalpadding{
+.global-spacing{
   padding: 0 ($mini * 1.5);
   @media (min-width: $tablet){
     padding: 0 $max;
   }
+  @media (min-width: $desktop + 50px){
+    max-width: $desktop - 100px;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.subtitle{
+  @include font-sizing($min-title, $min-title-line);
+  padding: $mini 0;
 }
 
 .regular-text{

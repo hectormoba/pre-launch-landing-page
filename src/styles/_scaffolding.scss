@@ -64,3 +64,8 @@ input {
   }
 }
 
+em {
+  @include font-sizing($text, $text-line);
+  font-style: normal;
+}
+

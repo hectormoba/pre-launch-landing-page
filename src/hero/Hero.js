@@ -31,7 +31,7 @@ class Hero extends Component {
     if(screenSize < 649) {
       chosenHeroImageLeft = <img className="hero-image" src={imageMobile} alt="Hero image mobile" />
       heroClass = "hero"
-      heroTextClass = "hero-text-container globalpadding"
+      heroTextClass = "hero-text-container global-spacing"
     } else {
       chosenHeroImageLeft = <img className="hero-image" src={imageLeft} alt="First Hero image" />
       chosenHeroImageRight = <img className="hero-image" src={imageRight} alt="First Hero image" />
