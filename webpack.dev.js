@@ -1,7 +1,9 @@
-const path = require('path');
- 
-module.exports = {
-  entry: path.resolve(__dirname, './src/index.js'),
+const {merge} = require('webpack-merge');
+const common = require('./webpack.common.js');
+
+module.exports = merge(common, {
+  mode: 'development',
+  devtool: 'inline-source-map',
   module: {
     rules: [
       {
@@ -28,10 +30,6 @@ module.exports = {
       },
     ]
   },
-  output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: 'bundle.js',
-  },
   
   devServer: {
     static: {
@@ -40,4 +38,4 @@ module.exports = {
     compress: true,
     port: 9000,
   }
-};
+});
