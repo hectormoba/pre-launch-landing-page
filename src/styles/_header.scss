@@ -36,6 +36,9 @@
     object-fit: cover;
     flex: 0 1.5 auto;
   }
+  @media (min-width: $desktop-limit){
+    object-fit: contain;
+  }
 }
 
 .hero-text-container{
@@ -47,6 +50,10 @@
   }
   @media (min-width: $desktop){
     max-width: $desktop - 100px;
+  }
+  @media (min-width: $desktop-limit){
+   margin: auto 0;
+   padding: 0 $mini * 1.5;
   }
 }
 

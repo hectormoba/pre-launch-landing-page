@@ -10,6 +10,10 @@ class Input extends Component {
   handleChange = (event) =>{
     this.setState({input: event.target.value})
   }
+
+  handleSubmit = (event) =>{
+    event.preventDefault()
+  }
   
   verifyEmail = () =>{
     const validator = /(\w+)@(\w+).(com|es|org|net)$/i
@@ -42,7 +46,7 @@ class Input extends Component {
     return(
       <div className="form-wrap global-spacing">
         <h2 className="title">Get notified when we lauch</h2>
-        <form className="bottom-form display-flex">
+        <form className="bottom-form display-flex" onSubmit={this.handleSubmit}>
           <div className="input-wrapper">
             <input className={inputClass} placeholder='Email address' value={input} onChange={this.handleChange} type='text' />
             {errorMessage}

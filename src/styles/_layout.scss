@@ -1,3 +1,9 @@
+.hero{
+  @media (min-width: $desktop-limit){
+    max-height: 50vh;
+  }
+}
+
 .page-section{
   margin-top: $regular * 3;
   @media (min-width: $tablet){
