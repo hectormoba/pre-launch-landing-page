@@ -39,7 +39,7 @@ class Hero extends Component {
       heroTextClass = "hero-text-container"
     }
     return(
-      <section className={heroClass}>
+      <div className={heroClass} role="main">
         {chosenHeroImageLeft}
         <div className={heroTextClass}>
           <h1 className="title">Get paid for the work you <b>love</b> to do</h1>
@@ -47,7 +47,7 @@ class Hero extends Component {
           <img className="icon" src={scrollImage} alt="Scroll icon" />
         </div>
         {chosenHeroImageRight}
-      </section>
+      </div>
     )
   }
 }
