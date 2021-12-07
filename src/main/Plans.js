@@ -3,7 +3,7 @@ import Check from '../assets/icon-check.svg'
 
 function PlansList(props){
   const list = props.itemList
-  return list.map((item,index) => <li key={index}><img className="filtered" src={Check}/>{item}</li>)
+  return list.map((item,index) => <li key={index}><img alt="check icon" className="filtered" src={Check}/>{item}</li>)
 }
 
 function Plans(props){

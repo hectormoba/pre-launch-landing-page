@@ -72,15 +72,15 @@ class App extends React.Component {
       <div>
         <Header logo={Logo}/>
         <Hero imageLeft={HeroLeft} imageRight={HeroRight} imageMobile={HeroMobile}  scrollImage={Scroll}/>
-        <section className="page-section global-spacing">
+        <section className="page-section global-spacing" aria-labelledby="main1">
           {itemsContent.map(item => 
             <Item name={item.id} image={item.image} title={item.title} text={item.text} key={item.id}/>)}
         </section>
-        <section className="title-transition">
+        <section className="title-transition" aria-labelledby="title">
           <h2 className="title">Our pricing plans</h2>
           <p className="regular-text">We only make money when our creators make money. Our plans are always affordable, and it’s completely free to get started.</p>
         </section>
-        <section className="plans-section page-section global-spacing"> 
+        <section className="plans-section page-section global-spacing" aria-labelledby="main2"> 
           {plansContent.map(item=>
           <Plans name={item.id} topIcon={item.icon} title={item.title} upperText={item.upperText} pricing={item.planPricing} planInstallment={item.planInstallment} items={item.itemsList} key={item.id}/>)}
         </section>

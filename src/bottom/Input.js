@@ -44,7 +44,7 @@ class Input extends Component {
       inputClass = 'input'
     }
     return(
-      <div className="form-wrap global-spacing">
+      <section className="form-wrap global-spacing" aria-labelledby="bottom">
         <h2 className="title">Get notified when we lauch</h2>
         <form className="bottom-form display-flex" onSubmit={this.handleSubmit}>
           <div className="input-wrapper">
@@ -53,7 +53,7 @@ class Input extends Component {
           </div>
           <input className="button"value='Get notified' type='button' onClick={this.verifyEmail}/>
         </form>
-      </div>
+      </section>
     )
   }
 }
