@@ -12,3 +12,5 @@ We know that this site has a limited funtionallity and we would have been able t
 ### About projects and styles
 
 This projects was done following the requirements of FrontEnd mentor challenges. We mustn't share any material, like design systems files. Instead, feel free to change colours or take it from `_variables.scss` file.
+
+You can see a deployed version of this page [here](https://pre-launch-page.netlify.app/). 
